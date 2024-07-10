@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InfixtoPostfix.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="625.0" prefWidth="1032.0">
+         <left>
+            <AnchorPane prefHeight="625.0" prefWidth="680.0" style="-fx-background-color: #4a6b50;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtinfix" layoutX="78.0" layoutY="82.0" prefHeight="104.0" prefWidth="523.0" style="-fx-background-radius: 0;">
+                     <font>
+                        <Font name="The Bold Font" size="42.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtpostfix" editable="false" layoutX="78.0" layoutY="296.0" prefHeight="104.0" prefWidth="523.0" style="-fx-background-radius: 0;">
+                     <font>
+                        <Font name="The Bold Font" size="42.0" />
+                     </font></TextField>
+                  <Button fx:id="btnConvert" layoutX="186.0" layoutY="500.0" mnemonicParsing="false" onAction="#Convert" prefHeight="70.0" prefWidth="309.0" style="-fx-background-color: #253528; -fx-background-radius: 0;" text="CONVERT" textFill="#e1e1e1">
+                     <font>
+                        <Font name="The Bold Font" size="34.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="78.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Infix">
+                     <font>
+                        <Font name="The Bold Font" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="78.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POSTFIX">
+                     <font>
+                        <Font name="The Bold Font" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txterror" fill="#ba0000b1" layoutX="104.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" textAlignment="CENTER" visible="false" wrappingWidth="473.13671875">
+                     <font>
+                        <Font name="The Bold Font" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="301.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="⬇" textAlignment="CENTER">
+                     <font>
+                        <Font name="The Bold Font" size="77.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="392.0" style="-fx-background-color: #253528;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="-1.0" layoutY="20.0" prefHeight="181.0" prefWidth="183.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: #4a6b50; -fx-border-color: #ffffff; -fx-border-width: 5;">
+                     <children>
+                        <Text fill="WHITE" layoutX="29.0" layoutY="131.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="I2P">
+                           <font>
+                              <Font name="thewitcher" size="120.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <TextArea fx:id="processarea" editable="false" layoutX="-1.0" layoutY="287.0" prefHeight="338.0" prefWidth="393.0" style="-fx-background-radius: 0;" text="Process:" wrapText="true">
+                     <font>
+                        <Font name="The Bold Font" size="16.0" />
+                     </font></TextArea>
+                  <Text fill="#4a6b50" layoutX="154.0" layoutY="114.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" text="Infix">
+                     <font>
+                        <Font name="The Bold Font" size="96.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#4a6b50" layoutX="279.0" layoutY="190.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" text="to">
+                     <font>
+                        <Font name="The Bold Font" size="86.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#4a6b50" layoutX="44.0" layoutY="264.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" text="postfix">
+                     <font>
+                        <Font name="The Bold Font" size="90.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</GridPane>
